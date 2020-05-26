@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             Title="{Binding Title}"
+             x:Class="HostnoMore.Views.Blog">
+
+    
+    <Frame Margin="10" VerticalOptions="FillAndExpand">
+        <Frame.Content>
+            <StackLayout VerticalOptions="FillAndExpand">
+                <StackLayout HorizontalOptions="FillAndExpand" Orientation="Horizontal">
+                    <Label Text="{Binding BlogDetail.BlogTitle}" HorizontalOptions="StartAndExpand"/>
+                </StackLayout>
+          
+                <BoxView Color="LightGray" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
+                <Label Text="{Binding BlogDetail.BlogDescription}" LineBreakMode="WordWrap" VerticalOptions="FillAndExpand"></Label>
+                <Button
+                 Text="{Binding BlogDetail.PriceSmall, StringFormat='Small ${0}'}"
+                 Command="{Binding TapToOrder1}" />
+                <Button 
+                 Text="{Binding BlogDetail.PriceMedium, StringFormat='Medium ${0}'}"
+                 Command="{Binding TapToOrder2}"/>
+                <Button 
+                 Text="{Binding BlogDetail.PriceLarge, StringFormat='Large ${0}'}"
+                 Command="{Binding TapToOrder3}"/>
+                <Image Source="{Binding BlogDetail.imageName}"/>
+            </StackLayout>
+        </Frame.Content>
+    </Frame>
+
+</ContentPage>

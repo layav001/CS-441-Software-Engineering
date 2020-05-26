@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:HostnoMore"
+    x:Class="HostnoMore.Views.LoginPage"
+    xmlns:prismBehaviors="clr-namespace:Prism.Behaviors;assembly=Prism.Forms"
+    NavigationPage.HasNavigationBar="false">
+    <StackLayout
+        Padding="0,50,0,10">
+        <Label
+            Text="Enter Username"
+            FontSize="16"
+            FontAttributes="Bold"
+            />
+        <Entry
+            Placeholder="username"
+            Text="{Binding restID}"
+            />
+        <Label
+            Text="Enter Password"
+            FontSize="16"
+            FontAttributes="Bold"
+            />
+        <Entry
+            Placeholder="****"
+            Text="{Binding restPassword}"
+            IsPassword="true"
+            />
+        <Grid
+               VerticalOptions="Center"
+            HorizontalOptions="Center"
+            Padding="0, 0, 0, 0">
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+                <RowDefinition
+                    Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition
+                    Width="auto" />
+            </Grid.ColumnDefinitions>
+            <Button
+                Text="Login Now"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="FillAndExpand"
+                Command="{Binding loginButton}"
+                Grid.Row="4"
+                Grid.Column="0"
+                />
+            <Button
+                   Text="Register Now"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="FillAndExpand"
+                Command="{Binding RegisterButton}"
+                Grid.Row="5"
+                Grid.Column="0"
+                />
+        </Grid>
+    </StackLayout>
+</ContentPage>

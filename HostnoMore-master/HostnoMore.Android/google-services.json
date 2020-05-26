@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "738678019239",
+    "firebase_url": "https://hostnodatabase.firebaseio.com",
+    "project_id": "hostnodatabase",
+    "storage_bucket": "hostnodatabase.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:738678019239:android:85445933f01936efee7782",
+        "android_client_info": {
+          "package_name": "com.companyname.HostnoMore"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "738678019239-i4mp83g7f1iman93h0irudblbcm69b05.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDNuGI7EM2tXRxt9jn0j6dyBWDUAuotjhg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "738678019239-i4mp83g7f1iman93h0irudblbcm69b05.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

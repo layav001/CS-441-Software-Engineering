@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HostnoMore.Views.ComboPage"
+             xmlns:local="clr-namespace:HostnoMore.Behaviors"
+             Title="{Binding Title}">
+
+    <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+        <ListView ItemsSource="{Binding Blogs, Mode=TwoWay}" HasUnevenRows="True" SelectedItem="{Binding SelectedBlog}" local:ItemTappedAttached.Command="{Binding NavigateToBlogCommand}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame Margin="10" VerticalOptions="FillAndExpand">
+                            <Frame.Content>
+                                <StackLayout>
+                                    <Label Text="{Binding BlogTitle}"/>
+                                    <Image Source="{Binding BlogDetail.imageName}"/>
+                                    <BoxView Color="LightGray" VerticalOptions="FillAndExpand" HeightRequest="1" HorizontalOptions="FillAndExpand" Margin="0,5,0,0" />
+                                    <Label Text="{Binding BlogDescription}" LineBreakMode="WordWrap" HeightRequest="100"></Label>
+                                </StackLayout>
+                            </Frame.Content>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+
+</ContentPage>

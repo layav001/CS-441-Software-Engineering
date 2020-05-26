@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TabbedPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HostnoMore.Views.MenuTwoContainerPage"
+    xmlns:views="clr-namespace:HostnoMore.Views">
+    <TabbedPage.ToolbarItems>
+        <ToolbarItem Icon="shoppingcart.png" Command="{Binding GoToCart}"/>
+    </TabbedPage.ToolbarItems>
+    <views:ComboPage
+        Title="Combos"
+        Icon="meal.png"
+        />
+    <views:EntreeSelectionPage
+        Title="Entrees"
+        Icon="indivitem.png"
+        />
+    <views:SidePage
+        Title="Sides"
+        Icon="drink.png"
+        />
+</TabbedPage>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="HostnoMore.Views.ConfirmationChickFilaPage"
+    NavigationPage.HasNavigationBar="false"
+    BackgroundImage="paymentBackground.jpeg">
+    <StackLayout
+        VerticalOptions="CenterAndExpand"
+        HorizontalOptions="CenterAndExpand">
+         <Label
+                Text="Tip Your Experience!"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                VerticalOptions="FillAndExpand"
+                Grid.Row="0"
+                Grid.Column="0"
+                />
+        <Grid
+            HorizontalOptions="Center"
+            VerticalOptions="Center"
+            Padding="5, 20, 5, 20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+                <RowDefinition Height="2*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+           
+            <Label
+                Text="{Binding Total, StringFormat='Total ${0}'}"
+                Grid.Row= "1"
+                Grid.Column="0"
+                />
+            <Button
+                Text="0%"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="10"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="1"
+                Command="{Binding tipZero}"
+                />
+            
+            <Button
+                Text="15%"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="20"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="2"
+                Command="{Binding tipFifteen}"
+                />
+
+            <Button
+                Text="20%"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="10"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="3"
+                Command="{Binding tipTwenty}"
+                />
+            <Button
+                Text="Delete Tip"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="10"
+                HorizontalOptions="Center"
+                Grid.Row="2"
+                Grid.Column="0"
+                Command="{Binding deleteTip}"
+                />
+            
+        </Grid>
+        <Button
+                Text="Place Another Order"
+                TextColor="Black"
+                FontAttributes="Bold"
+                FontSize="15"
+                HorizontalOptions="Center"
+                Command="{Binding AnotherOrder}"
+                Grid.Row="3"
+                Grid.Column="0"
+                />
+    </StackLayout>
+</ContentPage>
